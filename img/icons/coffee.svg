@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="80px" viewBox="0 0 50 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.2 (29753) - http://www.bohemiancoding.com/sketch -->
+    <title>coffee</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M25,79.2021484 C23.7490234,79.2021484 50,38.8071187 50,25 C50,11.1928813 38.8071187,7.10542736e-15 25,7.10542736e-15 C11.1928813,7.10542736e-15 0,11.1928813 0,25 C0,38.8071187 26.2509766,79.2021484 25,79.2021484 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.535315689   0 0 0 0 0.535315689   0 0 0 0 0.535315689  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <circle id="path-3" cx="20.5" cy="3.5" r="2.5"></circle>
+        <path d="M22.9693824,-2 C22.4891021,5.81803182 16.4183599,12 9,12 C1.58164015,12 -4.48910207,5.81803182 -4.96938242,-2 L22.9693824,-2 Z" id="path-5"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="coffee">
+            <g id="marker">
+                <g id="Oval-1-Copy">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#606060" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <circle id="Oval-2" fill="#FFFFFF" cx="25" cy="25" r="18"></circle>
+            </g>
+            <g id="coffee-cup" transform="translate(16.000000, 25.000000)">
+                <ellipse id="Oval-4" fill="#606060" cx="9" cy="11" rx="9" ry="2"></ellipse>
+                <ellipse id="Oval-5" fill="#606060" cx="21" cy="3.5" rx="3" ry="3.5"></ellipse>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="Oval-6" fill="#FFFFFF" xlink:href="#path-3"></use>
+                <mask id="mask-6" fill="white">
+                    <use xlink:href="#path-5"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#606060" xlink:href="#path-5"></use>
+            </g>
+            <g id="steam" transform="translate(21.000000, 12.000000)" stroke="#606060" stroke-linecap="square">
+                <path d="M6.00242092,9.5 C6.00242092,9.5 5.86035594,7.50908548 7.75278631,6.5 C9.64521667,5.49091452 12.3576024,4.65245817 13,4 C14.1427845,2.83931843 14,1 14,1" id="Line"></path>
+                <path d="M0.00242091535,9 C0.00242091535,9 -0.139644056,7.00908548 1.75278631,6 C3.64521667,4.99091452 6.35760237,4.15245817 7,3.5 C8.14278451,2.33931843 8,0.5 8,0.5" id="Line"></path>
+            </g>
+        </g>
+    </g>
+</svg>

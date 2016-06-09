@@ -1,0 +1,35 @@
+
+/*****************************************
+
+            Variables and Mixins
+
+*********************************************/
+
+$readable_grey      : #444444;
+$light_readable_grey: #808080;
+$link_blue          : #008BC1;
+$green              : #10BD1B;
+$blue               : #019ed5;
+$light_grey         : #C2C0C6;
+$error_red          : #e30000;
+
+$padding-container  : 15px;
+
+$title_name         : 'title' !default;
+
+
+
+@mixin flexbox {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+
+@mixin transition($timing) {
+  -webkit-transition: all #{$timing}s ease-in-out;
+     -moz-transition: all #{$timing}s ease-in-out;
+      -ms-transition: all #{$timing}s ease-in-out;
+       -o-transition: all #{$timing}s ease-in-out;
+}

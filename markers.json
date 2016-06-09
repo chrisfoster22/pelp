@@ -1,0 +1,64 @@
+{
+  "markers": [
+    {
+      "id": 1,
+      "name": "Lamplighter Roasting Co.",
+      "type": "coffee",
+      "address": "26 N Morris St, Richmond, VA 23220",
+      "rating": "5",
+      "img": "/img/ll_morris.jpg",
+      "lat": "37.54654",
+      "lng": "-77.45682"
+    },
+    {
+      "id": 2,
+      "name": "10 Italian Cafe",
+      "type": "coffee",
+      "address": "3200 Cary St Richmond, VA 23221",
+      "rating": "5",
+      "img": "/img/italian_cafe.jpg",
+      "lat": "37.553794",
+      "lng": "-77.482407"
+    },
+    {
+      "id": 3,
+      "name": "Garnett's",
+      "type": "food",
+      "address": "2001 Park Avenue RVA 23220",
+      "rating": "4",
+      "img": "/img/garnetts.jpg",
+      "lat": "37.5542349",
+      "lng": "-77.46332430000001"
+    },
+    {
+      "id": 4,
+      "name": "Ipanema Cafe",
+      "type": "food",
+      "address": "917 West Grace Street RVA 23220",
+      "rating": "4ia",
+      "img": "/img/ipanema.jpg",
+      "lat": "37.5502521",
+      "lng": "-77.45255329999998"
+    },
+    {
+      "id": 5,
+      "name": "The Daily Kitchen and Bar",
+      "type": "food",
+      "address": "2934 W Cary St Richmond, VA 23221",
+      "rating": "3",
+      "img": "/img/daily.jpg",
+      "lat": "37.5526549",
+      "lng": "-77.47854130000002"
+    },
+    {
+      "id": 6,
+      "name": "Sabai",
+      "type": "food",
+      "address": "2727 W Broad St Richmond, VA 23220",
+      "rating": "5",
+      "img": "/img/sabai.jpg",
+      "lat": "37.5614644",
+      "lng": "-77.46912320000001"
+    }
+  ]
+}

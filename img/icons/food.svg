@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="80px" viewBox="0 0 50 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.2 (29753) - http://www.bohemiancoding.com/sketch -->
+    <title>food</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M25,79.2021484 C23.7490234,79.2021484 50,38.8071187 50,25 C50,11.1928813 38.8071187,7.10542736e-15 25,7.10542736e-15 C11.1928813,7.10542736e-15 0,11.1928813 0,25 C0,38.8071187 26.2509766,79.2021484 25,79.2021484 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="2" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.219998937   0 0 0 0 0.219998937   0 0 0 0 0.219998937  0 0 0 0.41185462 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="food">
+            <g id="marker">
+                <g id="Oval-1-Copy">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#5C9CE6" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <circle id="Oval-2" fill="#FFFFFF" cx="25" cy="25" r="18"></circle>
+            </g>
+            <g id="knife" transform="translate(27.000000, 10.000000)" fill="#5D9CE6">
+                <rect id="Rectangle-2" x="2" y="15" width="3" height="15"></rect>
+                <path d="M0.696355066,6.3 C2.26315394,1.59960337 4.89635507,0 4.89635507,0 L4.89635507,18 L0.696355028,17 C0.696355028,17 -0.870443811,11.0003966 0.696355066,6.3 Z" id="Rectangle-3"></path>
+            </g>
+            <g id="fork" transform="translate(18.000000, 11.000000)" fill="#5D9CE6">
+                <rect id="Rectangle-4" x="4" y="0" width="1" height="13"></rect>
+                <rect id="Rectangle-4" x="2" y="0" width="1" height="13"></rect>
+                <rect id="Rectangle-4" x="0" y="0" width="1" height="13"></rect>
+                <rect id="Rectangle-7" x="0" y="13" width="5" height="2"></rect>
+                <rect id="Rectangle-8" x="1" y="15" width="3" height="14"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,47 @@
+
+
+//    ************
+//       HEADER
+//    ************
+
+.header-wrap {
+  padding: $padding-container;
+
+  p {
+  }
+}
+
+
+//    ************
+//        NAV
+//    ************
+
+.nav {
+  border-top: 1px solid #D76B7C;
+  border-bottom: 1px solid #D76B7C;
+  height: 40px;
+}
+
+
+
+//    ************
+//       FOOTER
+//    ************
+
+
+//    ************
+//      LISTING
+//    ************
+
+.listing-container {
+  @include transition(1);
+}
+
+.listing-img {
+  height: 200px;
+  margin: 0 2px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}

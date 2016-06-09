@@ -1,0 +1,227 @@
+/*****************************************************
+    Modals 
+
+    Styles lifted primarily from WWW.
+*****************************************************/
+
+body.modal_open {
+    overflow: hidden;
+}
+
+.modal_toggle, .tc_modal, .cvv_modal {
+  display: none;
+}
+
+.modal {
+
+  width: 90%;
+  margin: auto;
+  padding: 3px;
+  position: fixed;
+  z-index: 1001;
+  background: #fff;
+  border-radius: 6px 6px 3px 3px;
+  box-shadow: 0px 0px 12px 0px rgba(00, 00, 00, .50);
+  top: 10%;
+  left: 0;
+  right: 0;
+  max-height: 80%;
+  max-width: 800px;
+  padding-bottom: 1em;
+
+  .title--secondary {
+    text-align: left;
+    padding-bottom: .75em;
+  }
+
+ h2 {
+   height: 40px;
+   border: 1px solid #0e2d53;
+   margin: 0;
+   padding: 0 0 0 15px;
+   font-size: 16px;
+   font-weight: bold;
+   color: #fff !important;
+   line-height: 40px;
+   border-top-left-radius: 3px;
+   border-top-right-radius: 3px;
+   background: #044A7C;
+   background: -moz-linear-gradient(top, #044A7C 0%, #143256 100%);
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#044A7C), color-stop(100%,#143256));
+   background: -webkit-linear-gradient(top, #044A7C 0%,#143256 100%);
+   background: -o-linear-gradient(top, #044A7C 0%,#143256 100%);
+   background: -ms-linear-gradient(top, #044A7C 0%,#143256 100%);
+   background: linear-gradient(top, #044A7C 0%,#143256 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#044a7c', endColorstr='#143256',GradientType=0 );
+
+   /*the x icon to close modals*/
+   a.close, a.tc_close, a.cvv_close {
+       width: 18px;
+       height: 19px;
+       float: right;
+       margin: 10px 1%;
+       background: url(../img/icons/global_sprite.png) no-repeat -3px -51px;
+   } /*end a.close*/
+ } /*end h2*/
+
+ .modal_inner-wrapper {
+    padding: 1em 1em 3em;
+    p {
+      padding-bottom: 1em;
+    }
+ } /*.modal_inner_wrapper*/
+
+ button {
+  max-width: 9em;
+  padding:.5em;
+ }
+} /*end modal*/
+
+
+
+#overlay {
+
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index: 2;
+}
+
+/*Specific styles for Account Set Up. Everything above is modular with exception of x icon class names.*/
+
+.cvv_modal {
+  h3.title--secondary {
+    text-align: center;
+  }
+  .cvv_wrapper {
+    @include flexbox;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    max-width: 570px;
+    margin: auto;
+
+    @include bp(small){
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+    }
+  }
+} /*cvv_modal*/
+
+
+
+/**************************************
+
+        ONE DESIGN MODAL
+
+***************************************/
+
+
+/*This is the most basic One Design Modal. */
+.od_modal {
+  margin: auto;
+  position: fixed;
+  z-index: 1001;
+  background: #fff;
+  top: 10%;
+  left: 0;
+  right: 0;
+  max-height: 80%;
+
+  border-radius: 0;
+  max-width: 380px;
+  padding: 2rem;
+
+  .icon-x-close {
+    display: block;
+    text-align: right;
+    font-size: 1.5rem;
+  }
+
+  .close_x {
+      &:hover {
+        text-decoration: none;
+        cursor: pointer;
+    }
+  }
+
+
+  .cvv_img {
+    display: block;
+    margin: auto;
+  }
+
+  .modal-title {
+    font-size: 2rem;
+    font-family: 'proxima_nova_rgregular';
+    text-align: center;
+  }
+
+  .modal-subtitle {
+    color: $light_readable_grey;
+    text-align: center;
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 1.6rem;
+    padding-top: .5rem;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
+  .cvv_1  {
+    padding-right: 2rem;
+  }
+  .cvv_2 {
+    padding-left: 1.7rem;
+  }
+
+  .title--secondary {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: 'proxima_nova_ltsemibold';
+  }
+
+  .modal_inner-wrapper {
+    padding: 1em;
+  }
+
+} /*end one_design_modal*/
+
+/*This is a slightly more detailed modal - One Design with tabular data.*/
+.od_modal {
+    button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+.od_modal_table {
+  td {
+    padding-top: .75em;
+    padding-bottom: .75em;
+    &:first-child {
+      min-width: 160px;
+      text-transform: uppercase;
+      font-family: 'proxima_nova_ltsemibold';
+      font-size: 1rem;
+    }
+  }
+  tr {
+    &:nth-child(2){
+      background-color: #ddd;
+
+      /*Make element wider than parent*/
+      position: absolute;
+      left: 0;
+      right: 0;
+      padding-left: 2rem;
+      padding-right: 1rem;
+    }
+  }
+}
+

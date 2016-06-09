@@ -1,0 +1,107 @@
+
+
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    background-color: #fafafa;
+    color: $readable-grey;
+
+    /*sticky footer*/
+    display: -webkit-flex;
+    display: flex;
+    min-height: 100vh;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+h1 {
+    margin: .3em 0;
+}
+.main-wrapper {
+    font-family: Helvetica, Arial, sans-serif;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 0 1em 0;
+    border-bottom: 1px solid #D76B7C;
+
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-flow: row wrap;
+flex-flow: row wrap;
+}
+
+.left-content, .map-wrap {
+    display: inline-block;
+}
+
+.left-content {
+    // padding: 15px;
+    width: 30%;
+    min-width: 150px;
+}
+
+.map-wrap {
+    min-width: 300px;
+    width: 70%;
+    height: 500px;
+    ng-map {
+        width: 100%;
+        height: 100%;
+        background-color: #CCC;
+          }
+}
+
+a {
+    color: $link_blue;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+    &:active {
+        text-decoration: underline;
+    }
+} /*end a*/
+
+
+.centered {
+    display: block;
+    margin: auto;
+    padding-top: 1em;
+}
+
+.inner-wrapper {
+    margin: 10px;
+}
+
+.inner-wrapper-header {
+    max-width: 670px;
+}
+
+.page-copy {
+    padding: 1rem 0 1rem 0;
+    line-height: 1.7rem;
+
+    .login-page & {
+        padding-top: 2em;
+    }
+} /*end page-copy*/
+
+.centered-copy {
+    text-align: center;
+}
+
+.bold {
+    font-weight:bold;
+    font-family: 'proxima_nova_ltsemibold';
+}
+
+
+@media screen and (max-width: 500px) {
+    .left-content, .map-wrap {
+        display: block;
+        width: 100%;
+    }
+}
