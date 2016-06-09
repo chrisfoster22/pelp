@@ -59,6 +59,26 @@
       "img": "/img/sabai.jpg",
       "lat": "37.5614644",
       "lng": "-77.46912320000001"
+    },
+    {
+      "id": 7,
+      "name": "Meadow Park",
+      "type": "park",
+      "address": "400 N Meadow St Richmond, VA 23220",
+      "rating": "4",
+      "img": "/img/meadow.jpg",
+      "lat": "37.55368217",
+      "lng": "-77.46283739"
+    },
+    {
+      "id": 8,
+      "name": "Monroe Park",
+      "type": "park",
+      "address": "620 W Main St Richmond, VA 23220",
+      "rating": "4",
+      "img": "/img/monroe.jpg",
+      "lat": "37.54675826",
+      "lng": "-77.4502632"
     }
   ]
 }

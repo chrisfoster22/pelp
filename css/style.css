@@ -523,7 +523,12 @@ th {
   height: 40px;
 }
 
-/* line 36, _modules.scss */
+/* line 25, _modules.scss */
+.nav select option {
+  text-transform: capitalize;
+}
+
+/* line 39, _modules.scss */
 .listing-container {
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -531,13 +536,13 @@ th {
   -o-transition: all 1s ease-in-out;
 }
 
-/* line 40, _modules.scss */
+/* line 43, _modules.scss */
 .listing-img {
   height: 200px;
   margin: 0 2px;
   overflow: hidden;
 }
-/* line 44, _modules.scss */
+/* line 47, _modules.scss */
 .listing-img img {
   width: 100%;
 }

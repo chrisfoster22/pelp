@@ -1,3 +1,3 @@
 <ng-map center="[37.553, -77.462]" default-style="false" zoom="14" styles="[{stylers:[{hue:'#257849'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[]},{featureType:'water',stylers:[{color:'#039BB0'}]}]">
-    <marker ng-repeat="pos in positions" title="Hello" position="{{pos.lat}}, {{pos.lng}}" scaledSize="[70, 70]" icon="/img/icons/{{pos.type}}.svg" on-click="showInfo(event, {{pos}})"></marker>
+    <marker ng-repeat="mark in filteredMarkers" title="Hello" position="{{mark.lat}}, {{mark.lng}}" scaledSize="[70, 70]" icon="/img/icons/{{mark.type}}.svg" on-click="showInfo(event, {{mark}})"></marker>
 </ng-map>

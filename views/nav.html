@@ -1,3 +1,9 @@
-<nav>
-  
+<nav ng-controller="NavController">
+  <select ng-model="selectedType" ng-change="changeType(selectedType)">
+    <option value="All" selected>All</option>
+    <option value="food">Food</option>
+    <option value="coffee">Coffee</option>
+    <option value="park">Parks</option>
+  </select>
+
 </nav>

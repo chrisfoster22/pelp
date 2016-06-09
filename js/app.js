@@ -31,25 +31,6 @@ var myApp = angular.module('myApp', [
       });
   }); //end config
 
-  angular
-.module('myApp.services', [])
-// .factory('Data', function ($http) {
-//     return {
-//         get: function () {
-//             console.log("inside function");
-//             return $http.get('/data.json');
-//         }
-//     };
-// });
-
-myApp.service('Data', function($http) {
-  return {
-      get: function () {
-          return $http.get('/data.json');
-      }
-  };
-});
-
 myApp.service('Markers', function($http) {
   return {
       get: function () {
@@ -60,7 +41,7 @@ myApp.service('Markers', function($http) {
 
 myApp.service('MapData', function($http) {
   return {
-           message: "Hello"
+           selectedType: "All"
          };
 });
 
