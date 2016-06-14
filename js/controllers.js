@@ -4,14 +4,9 @@ var seedControllers = angular.module('seedControllers', []);
 
 seedControllers.controller('HomeController', function($scope, $timeout, $http, Markers, MapData) {
 
-      console.log(MapData.message);
       $scope.$watch(function() {
-        $scope.message = MapData.listing.name;
+        $scope.message = "Hello";
     });
-
-
-
-
 
 });
 
@@ -19,10 +14,6 @@ seedControllers.controller('MapController', function($scope, $state, $http, Mark
 
     NgMap.getMap().then(function(map) {
       map.center = [37.553, -77.462];
-  });
-
-  Markers.get().then(function (data) {
-    $scope.markers = data.data.markers;
   });
 
   $scope.showInfo = function(event, pin) {
@@ -34,13 +25,13 @@ seedControllers.controller('MapController', function($scope, $state, $http, Mark
 
   $scope.$watch('mapData', function(newVal, oldVal) {
     if (newVal !== oldVal) {
-      console.log("same");
       $scope.filteredMarkers = filterType($scope.mapData.selectedType);
     }
 
     Markers.get().then(function (data) {
       $scope.markers = data.data.markers;
       $scope.filteredMarkers = filterType($scope.mapData.selectedType);
+            console.log($scope.filteredMarkers);
     });
 
 
@@ -48,13 +39,11 @@ seedControllers.controller('MapController', function($scope, $state, $http, Mark
 
   var filterType = function(type) {
     var markers = [];
-    console.log(type);
     if (type === "All") {
       return $scope.markers;
     }
     angular.forEach($scope.markers, function(marker) {
     if (marker.type === type) {
-      console.log(marker.type);
       markers.push(marker);
     }
 

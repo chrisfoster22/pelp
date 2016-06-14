@@ -34,7 +34,7 @@ var myApp = angular.module('myApp', [
 myApp.service('Markers', function($http) {
   return {
       get: function () {
-          return $http.get('/markers.json');
+          return $http.get('/api');
       }
   };
 });
@@ -45,6 +45,5 @@ myApp.service('MapData', function($http) {
          };
 });
 
-// AIzaSyCeoy8WtdCmjqljQUIFuE3wffWjG03q4LU
 
 }()); //end wrapper function

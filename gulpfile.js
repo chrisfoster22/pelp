@@ -3,8 +3,9 @@
 	concat = require('gulp-concat');
 	compass = require('gulp-compass');
 	connect = require('gulp-connect');
+  webserver = require('gulp-webserver');
 
-	
+
 
 // All Sass files here.
 var sassSources = ['css/style.scss']
@@ -48,7 +49,7 @@ gulp.task('compass', function(){
 		.pipe(connect.reload())
 });
 
-// What to watch constantly. compass files can't use sassSource var because that file 
+// What to watch constantly. compass files can't use sassSource var because that file
 // doesn't change. Have to actually watch *.scss
 gulp.task('watch', function() {
 	gulp.watch(jsSources, ['js']),
@@ -56,12 +57,26 @@ gulp.task('watch', function() {
 	gulp.watch(htmlSources, ['html'])
 });
 
-// Starts server. Sets root of server to root directory (you can change this). 
+// Starts server. Sets root of server to root directory (you can change this).
 // Defaults to localhost:8080. You can specify port if needed.
-gulp.task('connect', function() {
-	connect.server({
-		livereload: true
-	});
+
+// gulp.task('connect', function() {
+// 	connect.server({
+// 		livereload: true
+// 	});
+// });
+
+
+gulp.task('webserver', function() {
+  gulp.src('.')
+    .pipe(webserver({
+      livereload: true,
+			proxies: [
+        {
+          source: '/api', target: 'http://localhost:3000/markers'
+        }
+      ]
+    }));
 });
 
 // Make sure livereload is watching html files
@@ -70,10 +85,4 @@ gulp.task('html', function(){
 		.pipe(connect.reload())
 });
 
-gulp.task('default', ['html', 'js', 'compass', 'connect', 'watch'])
-
-
-
-
-
-
+gulp.task('default', ['html', 'js', 'compass', 'webserver', 'watch'])
