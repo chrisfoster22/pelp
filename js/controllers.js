@@ -28,8 +28,8 @@ seedControllers.controller('MapController', function($scope, $state, $http, Mark
       $scope.filteredMarkers = filterType($scope.mapData.selectedType);
     }
 
-    Markers.get().then(function (data) {
-      $scope.markers = data.data.markers;
+    Markers.get().then(function (response) {
+      $scope.markers = response.data.markers;
       $scope.filteredMarkers = filterType($scope.mapData.selectedType);
             console.log($scope.filteredMarkers);
     });
@@ -55,12 +55,15 @@ seedControllers.controller('MapController', function($scope, $state, $http, Mark
 
 seedControllers.controller('ListingController', function($scope, $http, $stateParams, Markers, MapData) {
 
-  Markers.get().then(function (data) {
-    angular.forEach(data.data.markers, function(marker) {
+  Markers.get().then(function (response) {
+    console.log(response);
+    angular.forEach(response.data.markers, function(marker) {
       if (parseInt(marker.id) === parseInt($stateParams.listingId)) {
         $scope.listing = marker;
       }
     });
+  }, function(error) {
+    console.log(error);
   });
 
   });
