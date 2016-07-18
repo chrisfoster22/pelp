@@ -14,7 +14,29 @@ seedControllers.controller('MapController', function($scope, $state, $http, Mark
 
     NgMap.getMap().then(function(map) {
       map.center = [37.553, -77.462];
+
+      $scope.placeMarker = function(e) {
+        console.log("hello");
+
+        var marker = new google.maps.Marker({position: e.latLng, map: map});
+        console.log("position: " + e.latLng);
+
+        // google.maps.event.addListener(map, 'click', function(e) {
+        //   console.log(e);
+        // });
+
+
+        map.panTo(e.latLng);
+      };
   });
+
+  $scope.newMarker = {};
+
+  $scope.placeMarker = function(event) {
+    $scope.newMarker.latitude = event.latLng.lat();
+    $scope.newMarker.longitude = event.latLng.lng();
+    console.log($scope.newMarker);
+  };
 
   $scope.showInfo = function(event, pin) {
     MapData.listing = pin;
@@ -31,7 +53,6 @@ seedControllers.controller('MapController', function($scope, $state, $http, Mark
     Markers.get().then(function (response) {
       $scope.markers = response.data.markers;
       $scope.filteredMarkers = filterType($scope.mapData.selectedType);
-            console.log($scope.filteredMarkers);
     });
 
 
@@ -56,14 +77,11 @@ seedControllers.controller('MapController', function($scope, $state, $http, Mark
 seedControllers.controller('ListingController', function($scope, $http, $stateParams, Markers, MapData) {
 
   Markers.get().then(function (response) {
-    console.log(response);
     angular.forEach(response.data.markers, function(marker) {
       if (parseInt(marker.id) === parseInt($stateParams.listingId)) {
         $scope.listing = marker;
       }
     });
-  }, function(error) {
-    console.log(error);
   });
 
   });

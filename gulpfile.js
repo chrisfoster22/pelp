@@ -73,7 +73,7 @@ gulp.task('webserver', function() {
       livereload: true,
 			proxies: [
         {
-          source: '/api', target: 'http://pelp-api.herokuapp.com/markers/'
+          source: '/api', target: 'https://pelp-api.herokuapp.com/markers/'
         }
       ]
     }));

@@ -1,4 +1,5 @@
 (function() {
+  'use strict';
 
 var myApp = angular.module('myApp', [
   'ui.router',
@@ -35,11 +36,14 @@ myApp.service('Markers', function($http) {
   return {
       get: function () {
           return $http.get('/api');
+      },
+      post: function (data) {
+          $http.post('/api', data);
       }
   };
 });
 
-myApp.service('MapData', function($http) {
+myApp.service('MapData', function() {
   return {
            selectedType: "All"
          };
